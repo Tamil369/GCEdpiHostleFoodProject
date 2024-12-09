@@ -14,76 +14,11 @@ const port = 3011;
 const { console } = require('inspector');
 
 
-
-
-
-
-// const db = mysql.createConnection({
-//   host: 'sql12.freesqldatabase.com',
-//   user: 'sql12706859',
-//   password: 'sElwkdMRic',
-//   database: 'sql12706859',
-//   port: 3306
-// });
-
-
-
-// db.connect((err) => {
-//   if (err) 
-//     {
-//         console.log("Error in connecting a database......")
-//         throw err;
-//     }
-//   console.log('Connected to database');
-    
-// });
-
-
 let db;
 
 function handleDisconnect() {
-//   db = mysql.createConnection({
-//     host: 'sql12.freesqldatabase.com',
-//     user: 'sql12706859',
-//     password: 'sElwkdMRic',
-//     database: 'sql12706859',
-//     port: 3306
-//   });
-
-  db = mysql.createPool({
-    connectionLimit: 1000,
-    host: 'sql12.freesqldatabase.com',
-    user: 'sql12706859',
-    password: 'sElwkdMRic',
-    database: 'sql12706859',
-    port: 3306
-  });
-  db.getConnection((err, connection) => {
-    if (err) {
-      console.error('Error connecting to database:', err);
-      return;
-    }
-    console.log('Connected to database');
-    connection.release();
-  });
-
-//   db.connect((err) => {
-//     if (err) {
-//       console.log('Error connecting to database:', err);
-//       setTimeout(handleDisconnect, 2000); // retry after 2 seconds
-//     } else {
-//       console.log('Connected to database');
-//     }
-//   });
-
-//   db.on('error', (err) => {
-//     console.log('Database error', err);
-//     if (err.code === 'PROTOCOL_CONNECTION_LOST' || err.code === 'ECONNRESET') {
-//       handleDisconnect();
-//     } else {
-//       throw err;
-//     }
-//   });
+  // Get Your DataBase Connection Here !......
+ 
 }
 
 handleDisconnect();
@@ -91,8 +26,8 @@ handleDisconnect();
 const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'aforapplebforball987@gmail.com',
-          pass: 'qtwh medb uhvp oagk' // Make sure to replace with actual password
+          user: '123@gmail.com',
+          pass: '123' // Make sure to replace with actual password
         }
       });
 
@@ -113,7 +48,7 @@ app.use(session({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const SECRET_KEY = 'Gce_dPi_hOSteL'.padEnd(32, '0'); // Pads with '0' to make it 32 characters
+const SECRET_KEY = 'sk'.padEnd(32, '0'); // Pads with '0' to make it 32 characters
 
 const ALGORITHM = 'aes-256-cbc'; // Encryption algorithm
 // Encrypt data
