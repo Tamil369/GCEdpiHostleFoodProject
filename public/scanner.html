@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        ul, ol, ls, li {
+            text-align: center;
+            padding-left: 0;
+        }
+        body *{
+            font-style:normal;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .my {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center align items */
+        }
+        .logo {
+            margin: 1% 3% 5% 2%;
+        }
+        .navbar-nav {
+            padding: 0 10px;
+        }
+        .dropdown-menu {
+            top: 100%;
+        }
+
+        .navbar-brand {
+            margin: 0 auto;
+            display: block; 
+        }
+
+
+        /*****************WRITE YOUR CSS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        .navbar-brand 
+        {
+           
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+        }
+        .container
+        {
+            margin: 10% 5% ;
+            display:flex;
+            justify-content: center;
+            border: 5.6px solid #938787; /* Add border */
+            border-radius: 8px; /* Add border radius for rounded corners */
+            box-shadow:50px 70px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+            margin-top: 10%; 
+            flex-direction: column;
+            position: relative;
+        }
+        .child
+        {
+            margin: 10px;
+            
+        }
+        input {
+            width: 150px; /* Adjust as needed */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none; /* Remove default border */
+            border-bottom: 2px dotted #000000; /* Add bottom border */
+            outline: none; /* Remove outline */
+        }
+        form
+        {
+            padding: auto 10%;
+            padding-left: 10% ;
+        }
+        .out
+        {
+            margin:  10% 5% ;
+            margin-right: 20%;
+            margin-left: 10%;
+        }
+        #checkpassword
+        {
+            bottom: 20px;
+            right: 20px;
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border:dashed;
+            border-color: rgb(154, 140, 140);
+        }
+        #checkpassword svg
+        {
+            width: 30px; /* Set your desired width */
+            height: 30px;
+            opacity: 70%;
+            color: rgb(0, 0, 0);
+        }
+        /* Overlay styles */
+        /* Overlay styles */
+        .overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 80%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow around the overlay */
+            text-align: center;
+            padding: none;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #816060;
+            
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+
+        /* Form and result display */
+        #checkpassword-form {
+            margin-bottom: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* style for scanner */
+        input[type="checkbox"]
+        {
+            display: none;
+        }
+        .check-label {
+            border: 2px solid transparent;
+            padding: 5px;
+            display: flexbox;
+            position: relative;
+            padding-left: 30px; /* Adjust padding to make space for the tick */
+            margin: 5px;
+            border: 1px solid rgb(194, 187, 187);
+            border-radius: 10%;
+            background-color: #e7d8d887;
+        }
+        .check-label:hover
+        {
+            cursor:grab;
+        }
+
+        .checked-label {
+            
+            border: 2px solid rgb(52, 227, 140);
+            border-radius: 10%;
+        }
+
+        .checked-label::after {
+            content: '✔';  
+            position: absolute;
+            left: 5px;  
+            top: 50%;  
+            transform: translateY(-50%);  
+            color: #00805c87;  
+            font-size: 20px;  
+        } 
+        #video {
+            position: absolute;
+            width: 100%;
+            max-width: 400px; /* Adjust this value for your design */
+            height: 200px;
+            border: 2px solid black;
+            display: block;
+            margin: 0 auto;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        table {
+            margin-top: 20px;
+            border-collapse:separate;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            display: none; /* Initially hide the table */
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark my" aria-label="First navbar example">
+        <div class="container-fluid">
+            <div class="col-md-3 mb-2 mb-md-0 logo">
+                <a href="" class="d-inline-flex link-body-emphasis text-decoration-none" >
+                    <!-- Insert logo image -->
+                    <img src="./hostel_mess_logo_3.jpg " alt="Description of the image" height="40px" width="40px" >
+                </a>
+            </div>
+            <div style=" display: flex; justify-content: center;">
+            <a class="navbar-brand" href="#" style="margin-left: 1%;" >Food >> Money</a>
+           </div> 
+           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse" id="navbarsExample01">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="./admine-home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " href="./admine-main.html">Main page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="./choose-admin.html">choose-food</a>
+                    </li>
+
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="./make-admine.html">Make Admin</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="fetch('/signout', {method: 'POST',
+  credentials: 'include'}).then(response => { if (response.ok) window.location.href = '/login.html'; else alert('Failed to sign out.'); }).catch(error => { console.error('Error during signout:', error); alert('Failed to sign out.'); });">Sign Out<span style="margin-left: 10px;"></span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                          </svg></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!--*****************WRITE YOUR HTML CODE DOWN **************DONT CHANGE ANYTHING***************** */-->
+    <div class="out">  
+        <div class="container">  
+            
+            <h1>QR Code Scanner with Decryption</h1>
+            <video id="video" autoplay></video>
+            <div id="result">Scanning for QR code...</div>
+            <br>
+
+            <div  id="checking">
+                <h3>Mark Present For:</h3>
+                <input type="checkbox" name="check-absent" id="forbf">
+                <label for="forbf"  class="check-label">BREAKFAST </label>
+                <input type="checkbox" name="check-absent" id="forlunch">
+                <label for="forlunch"  class="check-label">LUNCH</label>
+                <input type="checkbox" name="check-absent" id="fordinner">
+                <label for="fordinner"  class="check-label">DINNER</label>
+                <br>
+                <button type="button" id="buttonchecking" class="btn btn-outline-info" 
+                    style="margin:2% auto 10px 40%; font-weight: bolder ; color: rgb(88, 144, 125);" onclick="checking(event)">
+                    Submit
+                </button>
+            
+            </div>
+
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Detail</th>
+                        <th>Values</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+
+            
+            
+        </div>
+        
+    </div>
+
+
+    <button type="button" id="checkpassword"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16" title="Check Password">
+        <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2"/>
+      </svg> 
+    </button>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <span class="closebtn" >&times;</span>
+            <form id="checkpassword-form">
+                <label for="email2"><h6>User ID:</h6></label>
+                <input id="email2" type="email" name="email" class="child input" placeholder="Enter User id . . . . . . . ." required><br>
+                <button type="submit" class="btn btn-secondary child" style="margin-left: 25%;">Check Password</button>
+                <p id="messages"></p>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        /*****************WRITE YOUR JS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        document.addEventListener('DOMContentLoaded', function() {
+            
+
+            // Adding checkbox event listeners
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const label = document.querySelector(`label[for="${this.id}"]`);
+                    if (this.checked) {
+                        label.classList.add('checked-label');
+                    } else {
+                        label.classList.remove('checked-label');
+                    }
+                });
+            });
+            checkMealTime();
+
+            
+        });
+        
+        const video = document.getElementById('video');
+        const resultElement = document.getElementById('result');
+        const dataTable = document.getElementById('dataTable');
+        const tableBody = document.getElementById('tableBody');
+        const playButton = document.getElementById('playButton');
+        const decryptionKey = "GCE-Dharmapuri"; // The key used for encryption
+        let lastScanTime = 0;
+        const scanInterval = 500; // 500ms between scans
+        let tableData = {};
+
+            
+
+        // Function to request camera access and stream video to the video element
+        function startVideo() {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+                    .then(stream => {
+                        video.srcObject = stream;
+                        video.play();
+                        playButton.style.display = 'none'; // Hide play button if video plays
+                    })
+                    .catch(err => {
+                        console.error("Error accessing camera: ", err);
+                        resultElement.textContent = "Error accessing camera. Please allow camera access.";
+                    });
+            } else {
+                resultElement.textContent = "Your device does not support camera access.";
+            }
+        }
+
+        // Function to decrypt QR code data
+        function decryptData(encryptedData, key) {
+            // Decrypt with CryptoJS AES
+            const decrypted = CryptoJS.AES.decrypt(encryptedData, key);
+            const decryptedText = decrypted.toString(CryptoJS.enc.Utf8); // Get decrypted UTF-8 string
+            return decryptedText;
+        }
+
+        // Function to display JSON data in the table with custom labels
+        function displayDataInTable(data) {
+            // Clear existing table rows
+            tableBody.innerHTML = '';
+
+            // Create table rows for each key-value pair with custom labels
+            
+
+            Object.keys(data).forEach(key => {
+                const row = document.createElement('tr');
+                const labelCell = document.createElement('td');
+                const valueCell = document.createElement('td');
+
+                labelCell.textContent = labels[key] || key; // Use custom label if available
+                valueCell.textContent = data[key];
+
+                row.appendChild(labelCell);
+                row.appendChild(valueCell);
+                tableBody.appendChild(row);
+
+                tableData[key] = data[key];
+            });
+
+            // Show the table
+            dataTable.style.display = 'table';
+            console.log(tableData["name"]);
+        }
+
+        // Continuously scan the video for QR codes with performance optimization
+        video.addEventListener('play', () => {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            const scan = () => {
+                const now = Date.now();
+                if (now - lastScanTime > scanInterval) {
+                    lastScanTime = now;
+                    if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                        canvas.height = video.videoHeight;
+                        canvas.width = video.videoWidth;
+                        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+                        const code = jsQR(imageData.data, imageData.width, imageData.height);
+
+                        if (code) {
+                            try {
+                                // Decrypt the QR code data using the secret key
+                                const decryptedData = decryptData(code.data, decryptionKey);
+
+                                // Log decrypted data for debugging
+                                console.log("Decrypted Data:", decryptedData);
+
+                                // Parse the decrypted data as JSON
+                                const jsonData = JSON.parse(decryptedData);
+
+                                // Display the decrypted data in the table
+                                displayDataInTable(jsonData);
+
+                            } catch (error) {
+                                resultElement.textContent = `Error: Invalid QR Code or Decryption failed.`;
+                            }
+
+                            // Pause the video when a QR code is detected
+                            video.pause();
+                        } else {
+                            resultElement.textContent = "Scanning for QR code...";
+                        }
+                    }
+                }
+                if (!video.paused) {
+                    requestAnimationFrame(scan);
+                }
+            };
+            scan();
+        });
+
+        // Play button fallback for mobile devices that do not autoplay video
+        
+
+        // Start the video on page load
+        startVideo();
+
+        function checkMealTime() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+
+            const breakfastCheckbox = document.getElementById('forbf');
+            const lunchCheckbox = document.getElementById('forlunch');
+            const dinnerCheckbox = document.getElementById('fordinner');
+
+            // Uncheck all boxes initially
+            breakfastCheckbox.checked = false;
+            lunchCheckbox.checked = false;
+            dinnerCheckbox.checked = false;
+
+            // Check the appropriate checkbox based on the time
+            if (currentHour >= 6 && currentHour <= 10) {
+                breakfastCheckbox.checked = true;
+            } else if (currentHour >= 12 && currentHour <= 14) {
+                lunchCheckbox.checked = true;
+            } else if (currentHour >= 16 && currentHour <= 21) {
+                dinnerCheckbox.checked = true;
+            }
+        }
+
+
+        // Get elements
+        const checkPasswordButton = document.getElementById('checkpassword');
+        const overlay = document.getElementById('overlay');
+        const closeButton = document.querySelector('.closebtn');
+        const checkPasswordForm = document.getElementById('checkpassword-form');
+        const resultDiv = document.getElementById('result');
+        const messagesDiv = document.getElementById('messages');
+        const emailInput = document.getElementById('email2');
+
+        // Handle button click to show overlay
+        checkPasswordButton.addEventListener('click', function() {
+            overlay.style.display = 'block';
+        });
+
+        // Handle close button click to hide overlay
+        closeButton.addEventListener('click', function() {
+            overlay.style.display = 'none';
+            // Clear form and messages
+            checkPasswordForm.reset();
+            resultDiv.innerHTML = '';
+            messagesDiv.innerHTML = '';
+        });
+
+        // Handle form submission
+        checkPasswordForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get the value of email input
+            const email = emailInput.value;
+
+            // Send user_id to server
+            fetch('/checkpassword', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            })
+            .then(function(response) {
+                return response.json().then(function(data) {
+                    if (response.ok) {
+                        // Display success message
+                        messagesDiv.innerHTML = data.message;
+                        messagesDiv.style.color = 'green';
+                    } else {
+                        // Display error message
+                        messagesDiv.innerHTML = data.message;
+                        messagesDiv.style.color = 'red';
+                    }
+                });
+            })
+            .catch(function(error) {
+                messagesDiv.innerHTML = 'Error: Unable to check password.';
+                messagesDiv.style.color = 'red';
+            });
+
+            // Clear form
+            checkPasswordForm.reset();
+        });
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

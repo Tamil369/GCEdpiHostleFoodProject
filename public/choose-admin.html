@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <style>
+        ul, ol, ls, li {
+            text-align: center;
+            padding-left: 0;
+        }
+        .container-fluid
+        {
+            position: relative;
+        }
+        .my {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center align items */
+        }
+        .logo {
+            margin: 1% 3% 5% 2%;
+        }
+        .navbar-nav {
+            padding: 0 10px;
+        }
+        .dropdown-menu {
+            top: 100%;
+        }
+
+        .navbar-brand {
+            margin: 0 auto;
+            display: block; 
+        }
+        body 
+        {
+            background-image:url(./HD\ wallpaper_\ cuisine\,\ food\,\ india\,\ indian\,\ jana\,\ mana.jpeg.jpg);
+            
+        }
+
+        /*****************WRITE YOUR CSS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        .navbar-brand 
+        {
+           
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+        }
+        .container
+        {
+            background-color:#eae1e1;
+            background-image: url(./HD\ wallpaper_\ cuisine\,\ food\,\ india\,\ indian\,\ jana\,\ mana.jpeg.jpg);
+            margin: 10% 5% ;
+            display: flex;
+            justify-content: center;
+            border: 5.6px solid #938787; /* Add border */
+            border-radius: 8px; /* Add border radius for rounded corners */
+            box-shadow:50px 70px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+            margin-top: 10%; 
+        }
+        .child
+        {
+            margin: 10px;
+            
+        }
+        input {
+            width: 15px; /* Adjust as needed */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none; /* Remove default border */
+            border-bottom: 2px dotted #000000; /* Add bottom border */
+            outline: none; /* Remove outline */
+        }
+        form
+        {
+            padding: auto 10%;
+            padding-left: 10% ;
+            padding-right: 10%;
+        }
+        .out
+        {
+            margin:  10% 5% ;
+            margin-right: 20%;
+            margin-left: 10%;
+        }
+        .btn
+        {
+            
+            margin: 10% auto 10px 40px ;
+        }
+        
+        .for
+        {
+            border:double;
+            margin: 5px;
+            border-radius: 5%;
+            border-color: #75686890;
+            padding: 10px;
+            padding-left: 20px;
+            background-color: #eae1e1;
+        }
+        span
+        {
+            color:rgb(222, 210, 210);
+            text-align: center;
+            padding-left: 35%;
+        }
+        .form-for-food
+        {
+            display: block;
+        }
+        #responce {
+            display: none; 
+            text-align: center; 
+            background-color: #eae1e1;
+            
+        }
+        #cooking-dis {
+            display: none; 
+            /* text-align: center;  */
+            background-color: #eae1e1;
+            
+        }
+        body {
+            transition: opacity 1s ease-out;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+
+         /* Style for the profile overlay */
+         .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            top: 70px;
+            left: 10%;
+            right: 10%;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(177, 126, 126);
+        }
+        .information
+        {
+            top:  100px;
+            right: 10px;
+            position:absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border:3px dashed;
+            border-color: rgb(154, 140, 140);
+            background-color: rgb(229, 255, 255);
+            z-index: 0;
+            transition: border 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+        .information svg
+        {
+            width: 30px; /* Set your desired width */
+            height: 30px;
+            opacity: 70%;
+            color: #3e3e3e;
+            
+        }
+        .information:hover
+        {
+            filter: brightness(1.0);
+            border: 5px solid whitesmoke;
+            background-color: white;
+        }
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        div {
+            transition: opacity 0.3s ease;
+        }
+        .reason {
+            transition: opacity 0.3s ease;
+        }
+        .notice-container {
+          background-color: #3e3e3e;
+           overflow: hidden;
+           text-align: center;
+           width: 100%;
+        }
+
+        .notice {
+            display: inline-block;
+            color: aqua;
+            padding: 10px 0;
+            animation: scrolle 5s alternate infinite;
+        }
+        .notice::selection
+        {
+            color: rgb(140, 149, 149);
+        }
+
+        @keyframes scrolle {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .today
+        {
+            background-color: #a3d6e6;
+            border: 2px solid rgb(220, 212, 168);
+            border-radius: 10%;
+            width: 120px;
+            height: 30px;
+            display: inline;
+            margin-left: 40%;
+            margin-top: 0%;
+            margin-bottom: none;
+            padding-bottom: none;
+        }
+        .today:hover
+        {
+            border: solid rgb(237, 237, 237);
+            background-color: aqua;
+            
+        }
+        
+
+
+        #doverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #doverlay-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        #doverlay-contentlabel {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #doverlay-content input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 5px double rgb(149, 230, 230);
+        }
+
+        
+
+        
+        #doverlay-content label
+        {
+            font-weight: bold;
+        }
+
+        /* Close Button */
+        #dcloseOverlay {
+            background-color: #dc3545;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        #dcloseOverlay:hover {
+            background-color: #c82333;
+        }
+        #dataButton {
+            padding: 10px 20px;
+            background-color: #69e1db;
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            bottom: 10px;
+            border-radius: 10%;
+            left: 5%;
+            transition: background-color 0.3s ease, border 0.3s ease;
+        }
+
+        #dataButton:hover {
+            border: 5px double  #ff0000;
+            background-color: #11ff00;
+        }
+
+
+
+         
+
+
+
+    </style>
+
+    
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark my" aria-label="First navbar example">
+        <div class="container-fluid">
+            
+            <div class="col-md-3 mb-2 mb-md-0 logo">
+                <a href="" class="d-inline-flex link-body-emphasis text-decoration-none" >
+                    <!-- Insert logo image -->
+                    <img src="./hostel_mess_logo_3.jpg " alt="Description of the image" height="40px" width="40px" >
+                </a>
+            </div>
+            <div style=" display: flex; justify-content: center;">
+            <a class="navbar-brand" href="#" style="margin-left: 1%;" >Food >> Money</a>
+           </div> 
+           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse" id="navbarsExample01">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./admine-home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./admine-main.html">Main page</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./make-admine.html">Make Admine</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showProfileOverlay(event)">Profile</a>
+                    </li> -->
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  id="signout-button" href="#" onclick="fetch('/signout', {method: 'POST', credentials: 'include'}).then(response => { if (response.ok) window.location.href = '/login.html'; else alert('Failed to sign out.'); }).catch(error => { console.error('Error during signout:', error); alert('Failed to sign out.'); });">Sign Out<svg style="margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"  class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                          </svg></a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <div id="loading-screen"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(254, 252, 252, 0.793); z-index: 9999; display: none; justify-content: center; align-items: center;">
+        <img src="./imageforhome/loadingGIF.gif" alt="Loading" style="width: 150px; height: auto;">
+    </div>
+
+
+    <!--*****************WRITE YOUR HTML CODE DOWN **************DONT CHANGE ANYTHING***************** */-->
+    <button type="button" id="tomorrow" class="today" onclick="window.location.href='./Tchoose-admin.html'">For Tomorrow</button>
+    <div class="out">  
+        <div class="container">
+             
+            <form class="form-for-food" id="choose-food-form">
+                <div class="notice-container">
+                    <div class="notice" id="not">
+                        Today:
+                    </div>
+                </div>
+                <span> BREAK FAST</span>
+                <div class=" for" id="bf-form"  name="bf" > 
+                    
+                    <div class="radio-container" >
+                        <input type="radio" id="bf-yes" name="bf-choice" value="yes" checked>
+                        <label for="bf-yes">Yes</label>
+                    </div>
+                    <div class="menu" id="bf-menu">
+                        <label for="bf-size">Choose a size:</label>
+                        <br>
+                        <select id="bf-size" class="btn btn-outline-secondary" name="bf-size">
+                            <option value="1.0">Large</option>
+                            <option value="0.75" selected>Regular</option>
+                            <option value="0.5">Small</option>
+                        </select>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="bf-no" name="bf-choice" value="0" >
+                        <label for="bf-no">No</label>
+                    </div>
+                    <input type="text" id="bf-reason" name="bfreason" class="hidden" style="width: 100%; display: none;" placeholder="Enter Reason....." maxlength="150" > 
+                    
+                </div>
+                <span> LUNCH</span>
+                <div class=" for" id="lunch-form"  name="lunch" > 
+                    
+                    <div class="radio-container" >
+                        <input type="radio" id="lunch-yes" name="lunch-choice" value="yes" checked>
+                        <label for="lunch-yes">Yes</label>
+                    </div>
+                    <div class="menu" id="lunch-menu">
+                        <label for="lunch-size">Choose a size:</label>
+                        <br>
+                        <select id="lunch-size" class="btn btn-outline-secondary" name="lunch-size">
+                            <option value="1.0">Large</option>
+                            <option value="0.75" selected>Regular</option>
+                            <option value="0.5">Small</option>
+                        </select>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="lunch-no" name="lunch-choice" value="0" >
+                        <label for="lunch-no">No</label>
+                    </div>
+                    <input type="text" id="lunch-reason" class="hidden" name="lunchreason" style="width: 100%; display: none;" placeholder="Enter Reason....."  maxlength="150"  > 
+                    
+                </div>
+                <span>DINNER </span>
+                <div class="for" id="dinner-form" name="dinner"> 
+                    
+                    <div class="radio-container">
+                        <input type="radio" id="dinner-yes" name="dinner-choice" value="yes" checked>
+                        <label for="dinner-yes">Yes</label>
+                    </div>
+                    <div class="menu" id="dinner-menu">
+                        <label for="dinner-size">Choose a size:</label>
+                        <br>
+                        <select id="dinner-size" class="btn btn-outline-secondary" name="dinner-size">
+                            <option value="1.0">Large</option>
+                            <option value="0.75" selected>Regular</option>
+                            <option value="0.5">Small</option>
+                        </select>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="dinner-no" name="dinner-choice" value="0" >
+                        <label for="dinner-no">No</label>
+                    </div>
+                    <input type="text" id="dinner-reason" class="hidden" name="dinnerreason" style="width: 100%; display: none;" placeholder="Enter Reason....." maxlength="150" > 
+                    
+                    
+                </div>
+                
+                <button id="sub" type="submit" class="btn btn-outline-secondary"  style="color: #111010; background-color: rgb(205, 223, 223);">SUBMIT</button>
+                
+            </form>
+            <div class="board" style="display: none;"></div>
+            <div id="responce">
+                <img src="./icons8-tick.gif" style="padding-left: 10%;">
+                <br>
+                <p> Thanks for your Responce</p>
+                <p id="message"></p>
+            </div>
+            <div id="cooking-dis" style="display: none;">
+                <br>
+                <img src="./iPHoUj9Qnr.gif"   style="padding-right: auto; margin-left: 25%; padding-left: 10%; width: 110px; height: 110px;">
+                <br>
+                <h5><p> Food is being Prepared...... </p></h5>
+            </div>
+
+            <!-- // just for profile overlay -->
+            <div id="profileOverlay" class="overlay" style="display: none;">
+                <div class="overlay-content">
+                    
+                    <h2>Your Profile</h2>
+                    <hr> 
+                    <span class="closebtn" onclick="closeProfileOverlay()">&times;</span>
+                    <p id="profileName"></p>
+                    <p id="profileUserId"></p>
+                    <p id="profileRegNo"></p>
+                    <p id="profilePhone"></p>
+                    <p id="profilebf"></p>
+                    <p id="profileLunch"></p>
+                    <p id="profileDinner"></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <button  type="button" class="information" title="information" onclick="infor()" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+            <path d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0"/>
+        </svg>
+
+    </button>
+
+    <div id="bmessage" style="display: none;">I ordered my BreakFast</div>
+    <div id="lmessage" style="display: none;">I ordered my Lunch</div>
+    <div id="dmessage" style="display: none;">I ordered my Dinner</div>
+
+
+    <div id="doverlay">
+        <div id="doverlay-content">
+            <h2>Meal Data Form</h2>
+            <form>
+                
+                <div class="form-group">
+                    <label for="datalunch">Lunch Data</label>
+                    <input type="text" id="datalunch" name="datalunch" placeholder="Enter lunch data" disabled required>
+                </div>
+
+                <div class="form-group">
+                    <label for="datadinner">Dinner Data</label>
+                    <input type="text" id="datadinner" name="datadinner" placeholder="Enter dinner data" disabled required>
+                </div>
+                <div class="form-group">
+                    <label for="databf">Breakfast Data</label>
+                    <input type="text" id="databf" name="databf" placeholder="Enter breakfast data" disabled required>
+                </div>
+
+                
+            </form>
+            <button id="dcloseOverlay">Close</button>
+        </div>
+    </div>
+    
+    <button id="dataButton">Show Data Form</button>
+
+
+
+
+
+
+    <script>
+        /*****************WRITE YOUR JS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        const bm = document.getElementById('bmessage');
+        const lm = document.getElementById('lmessage');
+        const dm = document.getElementById('dmessage');
+        const lunchYesRadio = document.getElementById('lunch-yes');
+        const lunchNoRadio = document.getElementById('lunch-no');
+        const lunchMenu = document.getElementById('lunch-menu');
+        const lunchSelectedSize = document.getElementById('lunch-size');
+
+         
+        const bfYesRadio = document.getElementById('bf-yes');
+        const bfNoRadio = document.getElementById('bf-no');
+        const bfMenu = document.getElementById('bf-menu');
+        const bfSelectedSize = document.getElementById('bf-size');
+        
+        const dinnerYesRadio = document.getElementById('dinner-yes');
+        const dinnerNoRadio = document.getElementById('dinner-no');
+        const dinnerMenu = document.getElementById('dinner-menu');
+        const dinnerSelectedSize = document.getElementById('dinner-size');
+        
+        const br = document.getElementById('bf-reason');
+        const lr = document.getElementById('lunch-reason');
+        const dr = document.getElementById('dinner-reason');
+
+        const board = document.querySelector('.board');
+
+        const container = document.getElementById('container')
+        var mutex = 0;
+        // Attach event listeners to the radio buttons
+        bfYesRadio.addEventListener("change", checkbf);
+        bfNoRadio.addEventListener("change", checkbf);
+        lunchYesRadio.addEventListener("change", checkLunch);
+        lunchNoRadio.addEventListener("change", checkLunch);
+        dinnerYesRadio.addEventListener("change", checkDinner);
+        dinnerNoRadio.addEventListener("change", checkDinner);
+        
+        const notice = document.getElementById('not');
+        notice.textContent+=getTomorrowsDateinAdmine();
+
+        const formarray = ['bf-form', 'lunch-form', 'dinner-form'];
+
+        function checkbf() {
+            if (bfYesRadio.checked) {
+                bfMenu.style.display = 'block';  
+                br.style.display='none';
+            } else {
+                bfMenu.style.display = 'none'; 
+                br.style.display='block';
+            }
+            // Update the board whenever the selection changes
+            //updateBoard();
+        }
+
+        function checkLunch() {
+            if (lunchYesRadio.checked) {
+                lunchMenu.style.display = 'block'; 
+                lr.style.display='none';
+            } else {
+                lunchMenu.style.display = 'none';
+                lr.style.display='block';
+            }
+            // Update the board whenever the selection changes
+            //updateBoard();
+        }
+        
+        function checkDinner() {
+            if (dinnerYesRadio.checked) {
+                dinnerMenu.style.display = 'block'; 
+                dr.style.display='none';
+            } else {
+                dinnerMenu.style.display = 'none';
+                dr.style.display='block';
+                
+            }
+            // Update the board whenever the selection changes
+            //updateBoard();
+        }
+        
+
+        function updateBoard() {
+            let bfSelectedValue = bfYesRadio.checked ? bfSelectedSize.value : bfNoRadio.value;
+            let lunchSelectedValue = lunchYesRadio.checked ? lunchSelectedSize.value : lunchNoRadio.value;
+            let dinnerSelectedValue = dinnerYesRadio.checked ? dinnerSelectedSize.value : dinnerNoRadio.value;
+            board.textContent = "BreakFast: " + bfSelectedValue + ", Lunch: " + lunchSelectedValue + ", Dinner: " + dinnerSelectedValue;
+        }
+
+        function display(event) {
+            event.preventDefault(); // Prevent form submission
+            updateBoard();
+            alert(board.textContent);
+            mutex=1;
+            checkmutex(event);
+        }
+        function checkmutex(event)
+        {
+            if(mutex==1)
+            {
+                const forms = document.getElementsByClassName('form-for-food');
+                for (let i = 0; i < forms.length; i++) {
+                    forms[i].style.display = 'none';
+                }
+                const res = document.getElementById('responce');
+                res.style.display = 'block';
+            }
+        }
+        function updateContentBasedOnTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            const min = now.getMinutes();
+            // form will be removed when user come between 10 to 6
+            if ((hours >= 22 ) || (hours < 6 )) { 
+                defaultUpdate();
+            }    
+        }
+        function defaultUpdate()
+        {
+            const forms = document.getElementsByClassName('form-for-food');
+            for (let i = 0; i < forms.length; i++) {
+                forms[i].style.display = 'none';
+            }
+            const cook = document.getElementById('cooking-dis');
+            cook.style.display= 'block' ;
+            try{
+                container.style.padding='none';
+            }catch(error)
+            {
+
+            }
+            
+            const bd = document.querySelector('body');
+            bd.style.backgroundImage = 'block';
+        }
+        updateContentBasedOnTime();
+
+
+        function functiontoSetSelectedValues() 
+        {
+            let foodPreferences = {
+                bf: 0.00,
+                bfReason: '',
+                lunch: 0.00,
+                lunchReason: '',
+                dinner: 0.00,
+                dinnerReason: ''
+            };
+
+            fetch('/setvalue',{
+                credentials: 'include'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    foodPreferences.bf = parseFloat(data.bf);
+                    foodPreferences.bfReason = data.bfreason;
+                    foodPreferences.lunch = parseFloat(data.lunch);
+                    foodPreferences.lunchReason = data.lreason;
+                    foodPreferences.dinner = parseFloat(data.dinner);
+                    foodPreferences.dinnerReason = data.dreason;
+
+                    // Set values in reason input
+                    
+                    
+                    
+
+                    // Set radio buttons and select options
+                    if (foodPreferences.bf === 0) {
+                        bfNoRadio.checked = true;
+                        br.value = foodPreferences.bfReason;
+                    } else {
+                        bfYesRadio.checked = true;
+                        for (let i = 0; i < bfSelectedSize.options.length; i++) {
+                            if (parseFloat(bfSelectedSize.options[i].value) === foodPreferences.bf) {
+                                bfSelectedSize.options[i].selected = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (foodPreferences.lunch === 0) {
+                        lunchNoRadio.checked = true;
+                        lr.value = foodPreferences.lunchReason;
+                    } else {
+                        lunchYesRadio.checked = true;
+                        for (let i = 0; i < lunchSelectedSize.options.length; i++) {
+                            if (parseFloat(lunchSelectedSize.options[i].value) === foodPreferences.lunch) {
+                                lunchSelectedSize.options[i].selected = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (foodPreferences.dinner === 0) {
+                        dinnerNoRadio.checked = true;
+                        dr.value = foodPreferences.dinnerReason;
+                    } else {
+                        dinnerYesRadio.checked = true;
+                        for (let i = 0; i < dinnerSelectedSize.options.length; i++) {
+                            if (parseFloat(dinnerSelectedSize.options[i].value) === foodPreferences.dinner) {
+                                dinnerSelectedSize.options[i].selected = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    // Call check functions to update UI
+                    checkbf();
+                    checkLunch();
+                    checkDinner();
+                })
+                .catch(error => {
+                    console.error('Error fetching admin data:', error);
+                    alert('Error fetching admin data. Please try again after login');
+                    window.location.href = './login.html';
+                });
+        }
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+        
+        functiontoSetSelectedValues();
+        updateFormVisibility();
+        setInterval(updateFormVisibility, 60000); // Check every minute
+
+
+        const dataButton = document.getElementById('dataButton');
+            const overlay = document.getElementById('doverlay');
+            const closeOverlay = document.getElementById('dcloseOverlay');
+            const changeButton = document.getElementById('changeButton');
+            const saveButton = document.getElementById('saveButton');
+            const inputs = document.querySelectorAll('#doverlay input[type="text"]');
+            const dl = document.getElementById('datalunch');
+            const dd = document.getElementById('datadinner');
+            const dbf = document.getElementById('databf');
+
+            fetch('/fooddata',{credentials: 'include'}
+                )
+            .then(response => {
+                    if (!response.ok) {
+                        // If server sends a redirect URL in JSON response, handle it
+                        return response.json().then(errData => {
+                            if (errData.redirect) {
+                                window.location.href = errData.redirect; // Redirect to the URL from the server
+                                throw new Error(errData.message || 'Redirecting to login.');
+                            }
+                            throw new Error(errData.message || 'An error occurred.');
+                        });
+                    }
+                    return response.json();
+                })
+            .then(data => {
+                dl.value=data.lunch;
+                dd.value=data.dinner;
+                dbf.value=data.bf;
+                
+            })
+            .catch(error => {
+                console.error('Error fetching admin data:', error);
+                
+            });
+
+
+            
+            dataButton.addEventListener('click', function() {
+                overlay.style.display = 'flex';
+            });
+
+            closeOverlay.addEventListener('click', function() {
+                overlay.style.display = 'none';
+            });
+
+
+        document.getElementById('choose-food-form').addEventListener('submit', function(event) {
+            // console.log("inside a submit ");
+            event.preventDefault(); // Prevent default form submission
+           
+            // conditon for not empty 
+
+            if(bfNoRadio.checked && br.value=='')
+            {
+                alert("Enter a valid Reason");
+                return;
+            }
+            else if(bfNoRadio.checked)
+            {
+                bm.textContent=br.value;
+            }
+            if(lunchNoRadio.checked && lr.value=='')
+            {
+                alert("Enter a valid Reason");
+                return;
+            }
+            else if(lunchNoRadio.checked)
+            {
+                lm.textContent=lr.value;
+            }
+            if(dinnerNoRadio.checked && dr.value=='')
+            {
+                alert("Enter a valid Reason");
+                return;
+            }
+            else if(dinnerNoRadio.checked)
+            {
+                dm.textContent=dr.value;
+            }
+
+            var str = bm.textContent + lm.textContent + dm.textContent;
+            display(event);
+
+
+            // Retrieve form values
+            const bfChoice = document.querySelector('input[name="bf-choice"]:checked').value;
+            const bfSize = document.getElementById('bf-size').value;
+            const lunchChoice = document.querySelector('input[name="lunch-choice"]:checked').value;
+            const lunchSize = document.getElementById('lunch-size').value;
+            const dinnerChoice = document.querySelector('input[name="dinner-choice"]:checked').value;
+            const dinnerSize = document.getElementById('dinner-size').value;
+            //my code 
+            let bfSelectedValue = bfYesRadio.checked ? bfSelectedSize.value : bfNoRadio.value;
+            let lunchSelectedValue = lunchYesRadio.checked ? lunchSelectedSize.value : lunchNoRadio.value;
+            let dinnerSelectedValue = dinnerYesRadio.checked ? dinnerSelectedSize.value : dinnerNoRadio.value;
+            // Prepare data to send to the server
+            const formData = {
+                bf : bfSelectedValue,
+                lunch: lunchSelectedValue,
+                dinner: dinnerSelectedValue,
+                bfreason:bm.textContent,
+                lreason: lm.textContent,
+                dreason: dm.textContent
+            };
+            //alert(formData.lunch,formData.dinner );
+
+            // Send data to server
+            fetch('/choose-food', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                    if (!response.ok) {
+                        // If server sends a redirect URL in JSON response, handle it
+                        return response.json().then(errData => {
+                            if (errData.redirect) {
+                                window.location.href = errData.redirect; // Redirect to the URL from the server
+                                throw new Error(errData.message || 'Redirecting to login.');
+                            }
+                            throw new Error(errData.message || 'An error occurred.');
+                        });
+                    }
+                    return response.json();
+                })
+            .then(data => {
+                if (data.redirect) {
+                        window.location.href = data.redirect;
+                    }
+                document.getElementById('message').textContent =  data.message;
+                    document.getElementById('message').style.color = 'green';
+                alert(data.message); 
+                
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('message').textContent = 'Failed to update food preferences try after login again';
+                    document.getElementById('message').style.color = 'red';
+                alert('Failed to update food preferences try after login again');
+                window.location.href = './login.html';
+            });
+            alert(str);
+        });
+    });
+
+
+        // Function to show the profile overlay
+        function showProfileOverlay(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            document.getElementById('profileOverlay').style.display = 'block';
+                
+
+            // Fetch profile data from the server
+            fetch('/profile', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include' // Include cookies for session
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                    window.location.href = './login.html';
+                } else {
+                    // Populate the overlay with profile data
+                    document.getElementById('profileName').textContent = `Name: ${data.name}`;
+                    document.getElementById('profileUserId').textContent = `User ID: ${data.user_id}`;
+                    document.getElementById('profileRegNo').textContent = `Reg No: ${data.reg_no}`;
+                    document.getElementById('profilePhone').textContent = `Phone: ${data.phone}`;
+                    document.getElementById('profilebf').textContent = `Break Fast: ${data.bf}`;
+                    document.getElementById('profileLunch').textContent = `Lunch: ${data.lunch}`;
+                    document.getElementById('profileDinner').textContent = `Dinner: ${data.dinner}`;
+                    
+                    // Show the profile overlay
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching profile data:', error);
+            });
+        }
+
+        // Function to close the profile overlay
+        function closeProfileOverlay() {
+            document.getElementById('profileOverlay').style.display = 'none'; // Hide the profile overlay
+        }
+
+
+        function infor()
+        {
+            let l = " Lunch : 6:00 AM to 09:30 AM \n";
+            let b = "For Next Day BreakFast : 05:00 PM to 10:00 PM \n";
+            let d = " Dinner : 12:00 PM to 02:30 PM \n";
+            alert(" Responcing Time : \n"+l+d+b);
+        }
+
+        function updateFormVisibility() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+
+            // Helper function to check time ranges
+            function isTimeBetween(startHour, startMinute, endHour, endMinute) {
+                const startTime = new Date(now);
+                startTime.setHours(startHour, startMinute, 0, 0);
+                const endTime = new Date(now);
+                endTime.setHours(endHour, endMinute, 0, 0);
+                return now >= startTime && now <= endTime;
+            }
+
+            if (isTimeBetween(6, 0, 9, 30)) {
+                toggleFormVisibility('bf-form', false);
+                toggleFormVisibility('lunch-form', true);
+                toggleFormVisibility('dinner-form', false);
+            } else if (isTimeBetween(17, 0, 22, 0)) {
+                toggleFormVisibility('bf-form', true);
+                toggleFormVisibility('lunch-form', false);
+                toggleFormVisibility('dinner-form', false);
+            } else if (isTimeBetween(12, 0, 14, 30)) {
+                toggleFormVisibility('bf-form', false);
+                toggleFormVisibility('lunch-form', false);
+                toggleFormVisibility('dinner-form', true);
+            } else {
+                defaultUpdate();
+            }
+        }
+
+        // Function to toggle visibility and disable/enable form elements
+        function toggleFormVisibility(formId, disabled) {
+            const form = document.getElementById(formId);
+            const div = form;
+            if (!disabled) {
+                div.classList.add('disabled');
+            } else {
+                div.classList.remove('disabled');
+            }
+
+            const formElements = form.querySelectorAll('input, textarea, button, select');
+            formElements.forEach(el => {
+                el.disabled = false;
+                el.setAttribute('tabindex', disabled ?  '0': '-1');
+            });
+        }
+        function getTomorrowsDateinAdmine() {
+            // Create a new Date object for the current date
+            let today = new Date();
+            
+            // Add one day to the current date
+            let tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 0);
+            
+            // Format the date as needed (e.g., YYYY-MM-DD)
+            let year = tomorrow.getFullYear();
+            let month = String(tomorrow.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+            let day = String(tomorrow.getDate()).padStart(2, '0');
+            
+            return `${day}-${month}-${year}`;
+        }
+
+        
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

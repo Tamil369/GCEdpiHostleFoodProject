@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        ul, ol, ls, li {
+            text-align: center;
+            padding-left: 0;
+        }
+        .my {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center align items */
+        }
+        .logo {
+            margin: 1% 3% 5% 2%;
+        }
+        .navbar-nav {
+            padding: 0 10px;
+        }
+        .dropdown-menu {
+            top: 100%;
+        }
+
+        .navbar-brand {
+            margin: 0 auto;
+            display: block; 
+        }
+
+
+        /*****************WRITE YOUR CSS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        .navbar-brand 
+        {
+           
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 10px;
+        }
+        /* Existing CSS */
+        .container {
+            margin: 10% 5%;
+            display: block;
+            justify-content:center; /* Adjust space between items */
+            align-items: center; /* Vertically center align items */
+            border: 5.6px solid #938787;
+            border-radius: 8px;
+            box-shadow: 50px 70px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10%;
+            padding: 5%;
+        }
+        .container > #checking > input
+        {
+            margin-left: 10%;
+            width: 15px;
+        }
+        .child {
+            margin: 10px;
+        }
+
+        input {
+            width: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px dotted #000000;
+            outline: none;
+        }
+
+        form {
+            padding: auto 10%;
+            padding-left: 10%;
+        }
+
+        .out {
+            margin: 10% 5%;
+            margin-right: 20%;
+            margin-left: 10%;
+        }
+
+        .para {
+            padding: 10px;
+        }
+        .num
+        {
+            width: 100%  ;
+            padding-left:20% ;
+            padding-right: 10%;
+
+
+        }
+
+        .num > * {
+            color: darkslategray;
+            display: flex;
+            
+            margin: 10px;
+            justify-content:flex-end;
+            align-items: center;
+            font-variant-numeric: tabular-nums;
+            margin-bottom: 15px;
+        }
+        .to-change-student
+        {
+            display: block;
+        }
+        img
+        {
+            margin-left: 20%;
+        }
+        /* Style for the profile overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            top: 70px;
+            left: 10%;
+            right: 10%;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(177, 126, 126);
+        }
+        .custom-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000095;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custom-overlay-content {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close-btn {
+            color: #7d4949;
+            position: absolute;
+            top: 0px;
+            right: 8px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .custom-overlay-content > p 
+        {
+            margin: 10px;
+        }
+        .custom-overlay-content > button
+        {
+            margin: 10px;
+
+        }
+        .checkpassword
+        {
+            bottom: 20px;
+            right: 20px;
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border:dashed;
+            border-color: rgb(154, 140, 140);
+        }
+        .checkpassword svg
+        {
+            width: 30px; /* Set your desired width */
+            height: 30px;
+            opacity: 70%;
+            color: #3e3e3e;
+        }
+        input[type="checkbox"]
+        {
+            display: none;
+        }
+        .check-label {
+            border: 2px solid transparent;
+            padding: 5px;
+            display: flexbox;
+            position: relative;
+            padding-left: 30px; /* Adjust padding to make space for the tick */
+            margin: 5px;
+            border: 1px solid rgb(194, 187, 187);
+            border-radius: 10%;
+            background-color: #e7d8d887;
+        }
+        .check-label:hover
+        {
+            cursor:grab;
+        }
+
+        .checked-label {
+            
+            border: 2px solid rgb(52, 227, 140);
+            border-radius: 10%;
+        }
+
+        .checked-label::after {
+            content: '✔';  
+            position: absolute;
+            left: 5px;  
+            top: 50%;  
+            transform: translateY(-50%);  
+            color: #00805c87;  
+            font-size: 20px;  
+        } 
+
+
+        .table-container {
+            width: 100%;
+              /* Set the desired height */
+            /* overflow: auto;   */
+            border: 1px solid #ddd; /* Optional: add a border to the container */
+            
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border:3px solid rgb(193, 246, 255) ;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            white-space: nowrap; /* Prevent text from wrapping */
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        th {
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #7fe81d5f;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #ffff397f;
+            color: #ff0606ab;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #87dcd2;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #da8dc2;
+        }
+        .notice-container {
+          background-color: #3e3e3e9f;
+           overflow: hidden;
+           text-align: center;
+           width: 100%;
+        }
+
+        .notice {
+            display: inline-block;
+            color: aqua;
+            padding: 10px 0;
+            animation: scrolle 5s alternate infinite;
+        }
+        .notice::selection
+        {
+            color: rgb(140, 149, 149);
+        }
+
+        @keyframes scrolle {
+            0% {
+                transform: translateX(200%);
+            }
+            100% {
+                transform: translateX(-150%);
+            }
+        }
+        .today
+        {
+            background-color: #a3d6e6;
+            border: 2px solid rgb(220, 212, 168);
+            border-radius: 10%;
+            width: 120px;
+            height: 30px;
+            display: inline;
+            margin-left: 40%;
+            margin-top: 0%;
+            margin-bottom: none;
+            padding-bottom: none;
+        }
+        .today:hover
+        {
+            border: solid rgb(237, 237, 237);
+            background-color: aqua;
+            
+        }
+  
+        
+
+
+
+
+
+    </style>
+
+    <script>
+        /*****************WRITE YOUR JS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark my" aria-label="First navbar example">
+        <div class="container-fluid">
+            <div class="col-md-3 mb-2 mb-md-0 logo">
+                <a href="" class="d-inline-flex link-body-emphasis text-decoration-none" >
+                    <!-- Insert logo image -->
+                    <img src="./hostel_mess_logo_3.jpg " alt="Description of the image" height="40px" width="40px" >
+                </a>
+            </div>
+            <div style=" display: flex; justify-content: center;">
+            <a class="navbar-brand" href="#" style="margin-left: 1%;" >Food >> Money</a>
+           </div> 
+           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse" id="navbarsExample01">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./admine-home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./choose-admin.html">choose-food</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showProfileOverlay(event)">Profile</a>
+
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./make-admine.html">Make Admine</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="fetch('/signout', {method: 'POST',
+  credentials: 'include'}).then(response => { if (response.ok) window.location.href = '/login.html'; else alert('Failed to sign out.'); }).catch(error => { console.error('Error during signout:', error); 
+                        alert('Failed to sign out.'); });">Sign Out<span style="margin-left: 10px;"></span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                          </svg></a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!--*****************WRITE YOUR HTML CODE DOWN **************DONT CHANGE ANYTHING***************** */-->
+
+
+    <button type="button" id="tomorrow" class="today" onclick="window.location.href='./admine-main.html'">For Today</button>
+    <div class="out">  
+        <div class="container">  
+            
+            <div class="notice-container">
+                <div class="notice" id="not">
+                    Tomorrow:
+                </div>
+            </div>
+            <div class="to-change-student" id="student-detail" style="display: block;">
+                <form>
+                    <p style="display: flex;">
+                        <h4 class="para" > Number Of Students Going to have food In Hostel Tomorrow :</h4> 
+                    </p>
+                    <hr>
+                    <h5 class="num">  
+                        <p>Total BreakFast: <span id="totalbf">0</span></p>
+                        <p>Total Lunch: <span id="totalLunch">0</span></p>
+                        <p>Total Dinner: <span id="totalDinner">0</span></p>
+                        <p>Total Users: <span id="totalRows">0</span></p>
+                    </h5> 
+                    
+                </form>
+            </div>
+            <div class="to-change-student" id="after-11" style="display: none;">
+                <form>
+                    <img src="./foodpanda-food.gif" draggable="false"  style="width: 40%; ">
+                    <br>
+                    
+                    <h5 class="" style="text-align: center; margin: 10px; margin-left: 10%;">Users are  Choosing ............ </h5> 
+                    
+                </form>
+            </div>
+            <hr>
+            <div  id="checking">
+                <h3>Check Absent</h3>
+                <input type="checkbox" name="check-absent" id="forbf">
+                <label for="forbf"  class="check-label">BREAKFAST </label>
+                <input type="checkbox" name="check-absent" id="forlunch">
+                <label for="forlunch"  class="check-label">LUNCH</label>
+                <input type="checkbox" name="check-absent" id="fordinner">
+                <label for="fordinner"  class="check-label">DINNER</label>
+                <br>
+                <button type="button" id="buttonchecking" class="btn btn-outline-info" style="margin:2% auto 10px 40%;" onclick="checking(event)">Check</button>
+
+                <div id="todisplay"> </div>
+
+            
+            </div>
+            
+            
+            
+
+
+        </div>
+    </div>
+
+    <!-- overlay for profile -->
+    <div id="profileOverlay" class="overlay" style="display: none;">
+        <div class="overlay-content">
+            
+            <h2>Your Profile</h2>
+            <hr> 
+            <span class="closebtn" onclick="closeProfileOverlay()">&times;</span>
+            <p id="profileName"></p>
+            <p id="profileUserId"></p>
+            <p id="profileRegNo"></p>
+            <p id="profilePhone"></p>
+            <p id="profilebf"></p>
+            <p id="profileLunch"></p>
+            <p id="profileDinner"></p>
+        </div>
+    </div>
+        <button id="uploadDataBtn" type="button" class="checkpassword" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+              </svg>
+
+        </button>
+        
+            <div id="uploadOverlay" class="custom-overlay">
+                <div class="custom-overlay-content">
+                    <span class="close-btn" onclick="closeUploadOverlay()">&times;</span>
+                    
+                    <p id="uploadPrompt">Do you want to upload data for <br><span id="uploadDate"></span>?</p>
+                    <!-- <button class="btn btn-success" style="background-color: rgb(79, 223, 118);" onclick="confirmUpload()">Yes</button> -->
+                    <button class="btn btn-success" style="background-color: rgb(79, 223, 118);" onclick="closeUploadOverlay()">Yes</button>
+                    <button class="btn btn-danger" style="background-color: #f01c1c80;" onclick="closeUploadOverlay()">No</button>
+                </div>
+            </div>
+
+
+
+
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script>
+        /*****************WRITE YOUR JS CODE DOWN ***************DONT CHANGE ANYTHING**************** */
+        function updateContentBasedOnTime() {
+            const now = new Date();
+            const hours = now.getHours();
+            const min = now.getMinutes();
+            const after = document.getElementById('after-11');
+            const student = document.getElementById('student-detail');
+                
+            if ((hours > 9) & hours < 24) // 10 and 18
+            { 
+                after.style.display='none';
+                student.style.display='block';
+            }    
+            else
+            {
+                after.style.display='block';
+                student.style.display='none';
+            }
+            if(hours==9 & min >=30)
+            {
+                after.style.display='none';
+                student.style.display='block';
+             }
+        }
+        // updateContentBasedOnTime();
+
+        function checkedAddition()
+        {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const label = document.querySelector(`label[for="${this.id}"]`);
+                    if (this.checked) {
+                        label.classList.add('checked-label');
+                    } else {
+                        label.classList.remove('checked-label');
+                    }
+                });
+            });
+        }
+
+
+        checkedAddition();
+
+
+        function convertMillisecondsToDate() 
+        {
+            const currentDate = new Date();
+            const milliseconds = currentDate.getTime();
+            const date = new Date(milliseconds);
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Ensure two digits
+            const day = String(date.getDate()).padStart(2, '0'); // Ensure two digits
+            return `${day}-${month}-${year}`;
+        }
+
+        let mealType;
+        function checking(event) 
+        {
+            const forbfChecked = document.getElementById('forbf').checked;
+            const forLunchChecked = document.getElementById('forlunch').checked;
+            const forDinnerChecked = document.getElementById('fordinner').checked;
+
+            
+
+            if (forbfChecked && forLunchChecked && forDinnerChecked) {
+                mealType = 'all';
+            } else if (forbfChecked && forLunchChecked) {
+                mealType = 'breakfast_and_lunch';
+            } else if (forbfChecked && forDinnerChecked) {
+                mealType = 'breakfast_and_dinner';
+            } else if (forLunchChecked && forDinnerChecked) {
+                mealType = 'lunch_and_dinner';
+            } else if (forbfChecked) {
+                mealType = 'breakfast';
+            } else if (forLunchChecked) {
+                mealType = 'lunch';
+            } else if (forDinnerChecked) {
+                mealType = 'dinner';
+            } else {
+                mealType = 'none';
+            }
+
+            switch (mealType) {
+                case 'breakfast':
+                    fetchAbsentData('breakfast');
+                    break;
+                case 'lunch':
+                    fetchAbsentData('lunch');
+                    break;
+                case 'dinner':
+                    fetchAbsentData('dinner');
+                    break;
+                case 'breakfast_and_lunch':
+                    fetchAbsentData('breakfast_and_lunch');
+                    break;
+                case 'breakfast_and_dinner':
+                    fetchAbsentData('breakfast_and_dinner');
+                    break;
+                case 'lunch_and_dinner':
+                    fetchAbsentData('lunch_and_dinner');
+                    break;
+                case 'all':
+                    fetchAbsentData('all');
+                    break;
+                default:
+                    document.getElementById('todisplay').textContent = 'No options selected';
+                    break;
+            }
+        }
+
+        // function fetchAbsentData(meal) {
+        //     fetch('/check-absent', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({ meal: meal })
+        //     })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         let displayText = '<ol> <hr>';
+        //         data.forEach(item => {
+        //             displayText += `<li>Name: ${item.name}, Phone: ${item.phone},  Year: ${item.year},  Dept: ${item.dept} , Date:${convertMillisecondsToDate()} </li> <hr>`;
+
+        //         });
+        //         displayText += '</ol>';
+        //         document.getElementById('todisplay').innerHTML = displayText;
+        //     })
+        //     .catch(error => {
+        //         console.error('Error fetching absent data:', error);
+        //         document.getElementById('todisplay').textContent = 'Error fetching absent data. Please try again later.';
+        //     });
+        // }
+        function filterTable() {
+            const checkedDepts = Array.from(document.querySelectorAll('.dept-filter:checked')).map(cb => cb.value);
+            const checkedYears = Array.from(document.querySelectorAll('.year-filter:checked')).map(cb => cb.value);
+
+            const table = document.getElementById('sampleTable');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                const dept = cells[4].textContent;
+                const year = cells[3].textContent;
+
+                if ((checkedDepts.length === 0 || checkedDepts.includes(dept)) &&
+                    (checkedYears.length === 0 || checkedYears.includes(year))) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+        function fetchAbsentData(meal) 
+        {
+            let id =1;
+            fetch('/Tcheck-absent', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ meal: meal })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let displayText = `
+                <div class="table-container" id='tabcon'>
+                    <h5>Filter by Department</h5>
+                        <label class="check-label" for='fcse'><input type="checkbox" class="dept-filter" value="CSE" id='fcse'> CSE</label>
+                        <label class="check-label" for='fcivil'><input type="checkbox" class="dept-filter" value="CIVIL" id='fcivil'> CIVIL</label>
+                        <label class="check-label" for='fmech'><input type="checkbox" class="dept-filter" value="MECH" id='fmech'> MECH</label>
+                        <label class="check-label" for='fece'><input type="checkbox" class="dept-filter" value="ECE" id='fece'> ECE</label>
+                        <label class="check-label" for='feee'><input type="checkbox" class="dept-filter" value="EEE" id='feee'> EEE</label>
+
+                        <h5>Filter by Year</h5>
+                        <label class="check-label" for='f1'><input type="checkbox" class="year-filter" value="I" id='f1'> I</label>
+                        <label class="check-label" for='f2'><input type="checkbox" class="year-filter" value="II" id='f2'> II</label>
+                        <label class="check-label" for='f3'><input type="checkbox" class="year-filter" value="III" id='f3'> III</label>
+                        <label class="check-label" for='f4'><input type="checkbox" class="year-filter" value="IV" id='f4'> IV</label>
+                    <hr>
+                    <h3> Table For ${mealType}       </h3>
+                        <table id="sampleTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Year</th>
+                                <th>Dept</th>
+                                <th>Reason</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>`;
+                data.forEach(item => {
+                    displayText += `
+                        <tr>
+                            <td>${id}</td>
+                            <td>${item.name}</td>
+                            <td>${item.phone}</td>
+                            <td>${item.year}</td>
+                            <td>${item.dept}</td>
+                            <td>${item.reason}</td>
+                            <td>${getTomorrowsDateinAdmine()}</td>
+                        </tr>`;
+                    id=id+1;
+                });
+                displayText += `
+                        </tbody>
+                    </table>
+                </div>
+                <button class="download-btn" onclick="downloadPDF('sampleTable')">Download PDF</button>
+                `;
+                document.getElementById('todisplay').innerHTML = displayText;
+                
+                document.querySelectorAll('.dept-filter, .year-filter').forEach(filter => {
+                    filter.addEventListener('change', filterTable);
+                    console.log("entered here");
+                });
+                checkedAddition();
+
+            })
+            .catch(error => {
+                console.error('Error fetching absent data:', error);
+                document.getElementById('todisplay').textContent = 'Error fetching absent data. Please try again later.';
+            });
+
+            
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/Tadmin-main-data',{
+                credentials: 'include'
+})
+                .then(response => {
+                    if (!response.ok) {
+                        // If server sends a redirect URL in JSON response, handle it
+                        return response.json().then(errData => {
+                            if (errData.redirect) {
+                                window.location.href = errData.redirect; // Redirect to the URL from the server
+                                throw new Error(errData.message || 'Redirecting to login.');
+                            }
+                            throw new Error(errData.message || 'An error occurred.');
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('totalbf').textContent = data.totalbf;
+                    document.getElementById('totalLunch').textContent = data.totalLunch;
+                    document.getElementById('totalDinner').textContent = data.totalDinner;
+                    document.getElementById('totalRows').textContent = data.totalRows;
+                })
+                .catch(error => {
+                    console.error('Error fetching admin data:', error);
+                    alert('Error fetching admin data.  Please try again after login  ');
+                     window.location.href = './login.html';
+                });
+        });
+
+        // Function to show the profile overlay
+        function showProfileOverlay(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            document.getElementById('profileOverlay').style.display = 'block';
+                
+
+            // Fetch profile data from the server
+            fetch('/profile', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include' // Include cookies for session
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                    window.location.href = './login.html';
+                } else {
+                    // Populate the overlay with profile data
+                    document.getElementById('profileName').textContent = `Name: ${data.name}`;
+                    document.getElementById('profileUserId').textContent = `User ID: ${data.user_id}`;
+                    document.getElementById('profileRegNo').textContent = `Reg No: ${data.reg_no}`;
+                    document.getElementById('profilePhone').textContent = `Phone: ${data.phone}`;
+                    document.getElementById('profileLunch').textContent = `Lunch: ${data.lunch}`;
+                    document.getElementById('profileDinner').textContent = `Dinner: ${data.dinner}`;
+                    document.getElementById('profilebf').textContent = `Break Fast: ${data.bf}`;
+                    // Show the profile overlay
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching profile data:', error);
+            });
+        }
+
+        // Function to close the profile overlay
+        function closeProfileOverlay() {
+            document.getElementById('profileOverlay').style.display = 'none'; // Hide the profile overlay
+        }
+
+        // Open upload overlay
+        function openUploadOverlay(date) {
+            
+            document.getElementById('uploadDate').textContent = date;
+            document.getElementById('uploadOverlay').style.display = 'flex';
+        }
+
+        // Close upload overlay
+        function closeUploadOverlay() {
+            document.getElementById('uploadOverlay').style.display = 'none';
+        }
+
+        // Confirm upload function
+        function confirmUpload() {
+            let d = new Date();
+            let day = ('0' + d.getDate()).slice(-2);// Get the day, add leading zero if needed
+            let month = ('0' + (d.getMonth() + 1)).slice(-2); // Get the month, add leading zero if needed (months are 0-indexed)
+            let year = d.getFullYear(); // Get the full year
+        
+            let formattedDateString  = `${day}-${month}-${year}`;
+            let formattedDate = String(formattedDateString);
+            const date = formattedDate;
+            fetch('/upload-data', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ date }),
+            })
+            .then(response => {
+                    if (!response.ok) {
+                        // If server sends a redirect URL in JSON response, handle it
+                        return response.json().then(errData => {
+                            if (errData.redirect) {
+                                window.location.href = errData.redirect; // Redirect to the URL from the server
+                                throw new Error(errData.message || 'Redirecting to login.');
+                            }
+                            throw new Error(errData.message || 'An error occurred.');
+                        });
+                    }
+                    return response.json();
+                })
+            .then(data => {
+                console.log('Data upload response:', data);
+                alert(data.message);
+                closeUploadOverlay();
+            })
+            .catch(error => {
+                console.error('Error uploading data:', error);
+                alert('Error uploading data. Please try again.');
+            });
+        }
+
+        // Event listener for Upload Data button
+        document.getElementById('uploadDataBtn').addEventListener('click', () => {
+            let d = new Date();
+            let day = ('0' + d.getDate()).slice(-2);
+            let month = ('0' + (d.getMonth() + 1)).slice(-2);
+            let year = d.getFullYear();
+            let formattedDateString = `${day}-${month}-${year}`;
+
+            openUploadOverlay(formattedDateString);
+        });
+
+        function downloadPDF(sectionId) {
+            
+            const table = document.getElementById('sampleTable');
+            const clone = table.cloneNode(true);
+
+            const checkedDepts = Array.from(document.querySelectorAll('.dept-filter:checked')).map(cb => cb.value);
+            const checkedYears = Array.from(document.querySelectorAll('.year-filter:checked')).map(cb => cb.value);
+
+            const rows = clone.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const year = row.cells[3].textContent.trim();
+                const dept = row.cells[4].textContent.trim();
+
+                if (
+                    (!checkedDepts.length || checkedDepts.includes(dept)) &&
+                    (!checkedYears.length || checkedYears.includes(year))
+                ) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            const filterSection = document.querySelector('.table-container').cloneNode(true);
+            clone.insertBefore(filterSection, clone.firstChild);
+
+            const milliseconds = Date.now();
+
+            html2pdf()
+                .from(clone)
+                .save(`filteredtableAT${milliseconds}.pdf`);
+
+        }
+        const notice = document.getElementById('not');
+        notice.textContent+=getTomorrowsDateinAdmine();
+        function getTomorrowsDateinAdmine() {
+            // Create a new Date object for the current date
+            let today = new Date();
+            
+            // Add one day to the current date
+            let tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            
+            // Format the date as needed (e.g., YYYY-MM-DD)
+            let year = tomorrow.getFullYear();
+            let month = String(tomorrow.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+            let day = String(tomorrow.getDate()).padStart(2, '0');
+            
+            return `${day}-${month}-${year}`;
+        }
+
+                
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
